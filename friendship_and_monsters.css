@@ -1,0 +1,42 @@
+body {
+    background-color:#f5b642;
+    width:auto;
+    height: 100vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+  }
+  
+  .box {
+    width: 400px;
+    padding: 400px;
+    background-color:#000723;
+    text-align:center;
+   
+  }
+  
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align:center;
+    color: #fff;
+  }
+  
+  img {
+    margin: 5px;
+    width: 350px;
+    height: 500px;
+    border: 8px solid #fff;
+    box-sizing: border-box;
+   
+  }
+  
+  
+  .text{
+      display:flex;
+      justify-content:flex-start;
+      align-items:flex-end;
+      color: white;
+      font-size: x;
+    }
