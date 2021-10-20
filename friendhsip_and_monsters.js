@@ -1,6 +1,6 @@
 const chaptersObj = {
     reveil: {
-    subtitle: 'RÉveil',
+    subtitle: 'Réveil',
     text:'Vous vous réveillez dans votre bunker et penser à votre meilleur(e) ami(e) qui est loin dans un bunker différent',
     img: 'reveil.jpg',
     options: [
@@ -212,6 +212,6 @@ chapitre14: {
             }
 
 function goToChapter(chapterName) {
-    const chapter = chapterObj[chapterName];
+    const chapter = chaptersObj[chapterName];
     console.log(chapter);
 }

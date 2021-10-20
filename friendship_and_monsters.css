@@ -1,4 +1,4 @@
-body {
+body {  
     background-color:#f5b642;
     width:auto;
     height: 100vh;
@@ -41,6 +41,21 @@ body {
       font-size: x;
     }
 
+    .buttons {
+  display:flex;
+  justify-content: space-around;
+}
+ 
+    .button {
+      height:30px;
+      width:100px;
+    }
+    
+    .button:hover {
+      background-color:#f5b642; 
+      color: white;
+     
+    }
   
 
   
