@@ -2,7 +2,7 @@ const chaptersObj = {
     reveil: {
     subtitle: 'Réveil',
     text:'Vous vous réveillez dans votre bunker et penser à votre meilleur(e) ami(e) qui est loin dans un bunker différent',
-    img: 'reveil.jpg',
+    img: 'assets/reveil.jpg',
     options: [
     {
         text: "Sortir dehors aller rejoindre son ami(e)",
@@ -19,7 +19,7 @@ const chaptersObj = {
 chapitre2: {
     subtitle: 'Mort par invasion de monstres',
     text:'.',
-    img: 'bunker_monster.jpg',
+    img: 'assets/bunker_monster.jpg',
     options: [
         {
             text: "Suivant",
@@ -32,7 +32,7 @@ chapitre2: {
 chapitre3: {
     subtitle: 'Part en aventure',
     text:'.',
-    img: 'chapitre2.jpg',
+    img: 'assets/aventure.jpg',
     options: [
         {
             text: "Suivant",
@@ -45,7 +45,7 @@ chapitre3: {
 chapitre4: {
     subtitle: 'Trouve une van',
     text:'En se promenant, vous trouvez une van abandoné parmis des maison en ruine.',
-    img: 'van.jpg',
+    img: 'assets/van.jpg',
     options: [
         {
             text: "Chercher la van. En cherchant la van vous trouvez un chien.",
@@ -61,7 +61,7 @@ chapitre4: {
 chapitre5: {
     subtitle: 'Trouve un chien',
     text:'En cherchant la van, vous trouvez un chien.',
-    img: 'dog.jpg',
+    img: 'assets/dog.jpg',
     options: [
         {
             text: "Suivant.",
@@ -75,7 +75,7 @@ chapitre5: {
 chapitre6: {
         subtitle: 'Monstre sur votre chemin',
         text:'En continuant votre chemin, vous rencontrez un monstre sur votre chemin.',
-        img: 'fige.jpg',
+        img: 'assets/fige.jpg',
         options: [
             {
                 text: "Courire vite sans regarder derrière.",
@@ -96,7 +96,7 @@ chapitre6: {
 chapitre7: {
         subtitle: 'Tombe dans un nid',
         text:'Vous courrez sans regarder ou vous allez et tomber dans un nid de sand gobblers.',
-        img: 'sand_gobblers.jpg',
+        img: 'assets/sand_gobblers.jpg',
         options: [
             {
                 text: "Suivant.",
@@ -109,7 +109,7 @@ chapitre7: {
 chapitre8: {
         subtitle: 'Mort',
         text:'.',
-        img: 'mort.jpg',
+        img: 'assets/mort.jpg',
         options: [
             {
                 text: "Suivant.",
@@ -122,7 +122,7 @@ chapitre8: {
 chapitre9: {
         subtitle: 'Monstre part.',
         text:'Vous resté figé sur place et le monstre désinteressé continue sa route.',
-        img: 'snail.jpg',
+        img: 'assets/snail.jpg',
         options: [
             {
                 text: "Continuer votre chemin à droite.",
@@ -138,7 +138,7 @@ chapitre9: {
 chapitre10: {
         subtitle: 'Attaque surprise bonus chien.',
         text:'En marchant paisiblement vous vous faites soudainement attaquer par surpsise par une énorme grenouille.',
-        img: 'frog.jpg',
+        img: 'assets/frog.jpg',
         options: [
             {
                 text: "Sans chien.",
@@ -155,7 +155,7 @@ chapitre10: {
 chapitre11: {
         subtitle: 'Rencontre de 2 étrangers.',
         text:'En marchant vous rencontrez 2 étrangers qui vous accompagne pour quelques jours pendant votre séjour vous apprenant de nouvelles choses sur les monstres.',
-        img: 'strangers.jpg',
+        img: 'assets/strangers.jpg',
         options: [
             {
                 text: "Partir avec eux.",
@@ -172,7 +172,7 @@ chapitre11: {
 chapitre12: {
         subtitle: 'Part dans le nord.',
         text:'Vous restez avec les 2 inconnus que vous avez rencontrer et partez vers le nord avec eux en lieu plus sure.',
-        img: 'mountains.jpg',
+        img: 'assets/mountains.jpg',
         options: [
             {
                 text: "Sans chien.",
@@ -189,7 +189,7 @@ chapitre12: {
 chapitre13: {
         subtitle: 'Attaque Bunker de son ami(e).',
         text:'Vous arrivez enfin au bunker de votre ami(e). Par contre, la colonie est attaquer par des pirates qui on enchainer un crabe géant pour le controler.',
-        img: 'crabe.jpg',
+        img: 'assets/crabe.jpg',
         options: [
                 {
                 text: "L'attquer et essayer de le tuer.",
@@ -206,12 +206,16 @@ chapitre13: {
 chapitre14: {
         subtitle: 'Part dans le nord avec son ami(e).',
         text:'Vous et votre ami(e) décider de partir vers le nord ou les monstre y sont moins nombreux.',
-        img: 'ending.jpg',
+        img: 'assets/ending.jpg',
         
                 },
             }
 
 function goToChapter(chapterName) {
     const chapter = chaptersObj[chapterName];
+    document.querySelector(".chapitre").innerText=chapter.subtitle;
+    document.querySelector(".text").innerText=chapter.text;
+    document.querySelector(".image").innerHTML=`<img src="${chapter.img}"/>`
     console.log(chapter);
 }
+
