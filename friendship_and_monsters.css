@@ -12,6 +12,7 @@ body {
     padding: 400px;
     background-color:#000723;
     text-align:center;
+    border: 8px solid #fff;
    
   }
   
@@ -22,18 +23,27 @@ body {
     text-align:center;
     color: #fff;
   }
+  .image {
+    display: flex;
+  justify-content: center;
   
+  }
   img {
+  
+    object-fit: contain;
     margin: 5px;
-    width: 350px;
+    width: 800px;
     height: 500px;
-    border: 8px solid #fff;
+    
     box-sizing: border-box;
    
   }
+
+
   
   
   .text{
+    margin-top:40px;
       display:flex;
       justify-content:flex-start;
       align-items:flex-end;
@@ -44,6 +54,7 @@ body {
     .buttons {
   display:flex;
   justify-content: space-around;
+  margin-top:40px;
   
 }
  
@@ -63,5 +74,6 @@ body {
   justify-content: center;
   font-family:Arial, Helvetica, sans-serif;
   color:white;
+  margin-top: 30px;
 }
   

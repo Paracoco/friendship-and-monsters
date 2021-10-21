@@ -1,5 +1,5 @@
 const chaptersObj = {
-    reveil: {
+    chapitre1: {
     subtitle: 'Réveil',
     text:'Vous vous réveillez dans votre bunker et penser à votre meilleur(e) ami(e) qui est loin dans un bunker différent',
     img: 'assets/reveil.jpg',
@@ -212,10 +212,18 @@ chapitre14: {
             }
 
 function goToChapter(chapterName) {
-    const chapter = chaptersObj[chapterName];
-    document.querySelector(".chapitre").innerText=chapter.subtitle;
-    document.querySelector(".text").innerText=chapter.text;
-    document.querySelector(".image").innerHTML=`<img src="${chapter.img}"/>`
-    console.log(chapter);
-}
+    let choice = "";
+    let chapter = chaptersObj[chapterName];
+    document.querySelector(".chapitre").innerText= chaptersObj[chapterName].subtitle;
+    document.querySelector(".text").innerText= chaptersObj[chapterName].text;
+    document.querySelector(".image").innerHTML=`<img src="${chapter.img}"/>`;
+   
 
+    const optionArr = chaptersObj[chapterName].options.length;
+   
+    for (let index = 0; index < optionArr; index++){
+        document.querySelector(".options").innerHTML = choice += `<input type="button" class="button" value='${chaptersObj[chapterName].options[index].text}' onclick="${chaptersObj[chapterName].options[index].action}"/>`;
+
+  
+}
+}
