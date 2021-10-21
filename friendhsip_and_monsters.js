@@ -1,4 +1,22 @@
-const chaptersObj = {
+let dogFound = false;
+function startDog() {
+    if (dogFound = true){
+    goToChapter("chapitre5")}
+
+    else {goToChapter("")}
+};
+
+let knowledge = false;
+function startKnowledge (){
+    if (knowledge = true){
+    goToChapter("chapitre13")
+    }
+    else {
+        goToChapter("")
+    }
+};
+
+let chaptersObj = {
     chapitre1: {
     subtitle: 'Réveil',
     text:'Vous vous réveillez dans votre bunker et penser à votre meilleur(e) ami(e) qui est loin dans un bunker différent',
@@ -224,6 +242,7 @@ function goToChapter(chapterName) {
     for (let index = 0; index < optionArr; index++){
         document.querySelector(".options").innerHTML = choice += `<input type="button" class="button" value='${chaptersObj[chapterName].options[index].text}' onclick="${chaptersObj[chapterName].options[index].action}"/>`;
 
-  
+     
 }
 }
+
