@@ -1,4 +1,10 @@
 let dogFound = false;
+
+function achieveStartDog() {
+    dogFound = true;
+    goToChapter("chapitre5")
+};
+
 function startDog() {
     if (dogFound == true) {
         goToChapter("chapitre13");
@@ -8,6 +14,12 @@ function startDog() {
 };
 
 let knowledge = false;
+
+function achieveStartKnowledge(){
+    knowledge = true;
+    goToChapter("chapitre11")
+};
+
 function startKnowledge (){
     if (knowledge == true) {
         goToChapter("chapitre14");
@@ -25,7 +37,7 @@ function reset(){
 let chaptersObj = {
     chapitre1: {
         subtitle: 'Réveil',
-        text:'Vous vous réveillez dans votre bunker et penser à votre meilleur(e) ami(e) qui est loin dans un bunker différent',
+        text:'Vous vous réveillez dans votre bunker et penser à votre meilleur(e) ami(e) qui est loin dans un bunker différent.',
         img: 'assets/reveil.jpg',
         options: [
             {
@@ -53,7 +65,7 @@ let chaptersObj = {
 
     chapitre3: {
         subtitle: 'Part en aventure',
-        text: 'Vous prenez votre courage et commencez votre séjour en direction du bunker de votre ami.',
+        text: 'Vous prenez votre courage à deux mains et commencez votre séjour en direction du bunker de votre ami.',
         img: 'assets/aventure.jpg',
         options: [
             {
@@ -65,15 +77,15 @@ let chaptersObj = {
 
     chapitre4: {
         subtitle: 'Trouve une van',
-        text:'En se promenant, vous trouvez une van abandoné parmis des maison en ruine.',
+        text:'En se promenant, vous trouvez une van abandoné parmis des maisons en ruines.',
         img: 'assets/van.jpg',
         options: [
             {
-                text: "Chercher la van. En cherchant la van vous trouvez un chien.",
-                action: "goToChapter('chapitre5')",
+                text: "Chercher la van",
+                action: "achieveStartDog()",
             },
             {   
-                text: "Continuer sa route.",
+                text: "Continuer sa route",
                 action: "goToChapter('chapitre6')",
             }
         ]
@@ -85,7 +97,7 @@ let chaptersObj = {
         img: 'assets/dog.jpg',
         options: [
             {
-                text: "Suivant.",
+                text: "Suivant",
                 action: "goToChapter('chapitre6')",
             }
         ]
@@ -97,15 +109,15 @@ let chaptersObj = {
         img: 'assets/fige.jpg',
         options: [
             {
-                text: "Courire vite sans regarder derrière.",
+                text: "Courire vite sans regarder derrière",
                 action: "goToChapter('chapitre7')",
             },
             {   
-                text: "Utiliser votre arbalète que vous ignoré les fonctions.",
+                text: "Utiliser votre arbalète que vous ignoré les fonctions",
                 action: "goToChapter('chapitre8')",
             },
             {   
-                text: "Resté figé.",
+                text: "Resté figé",
                 action: "goToChapter('chapitre9')",
             }
         ]
@@ -125,7 +137,7 @@ let chaptersObj = {
 
     chapitre8: {
         subtitle: 'Mort nid',
-        text: 'Il y avait aucune possibilité de sortir du nid seul. vous êtes devenu le diner des sand gobblers',
+        text: 'Il y avait aucune possibilité de sortir du nid seul. Vous êtes devenu le dinner des sand gobblers',
         img: 'assets/mort.jpg',
         options: [
             {
@@ -141,12 +153,12 @@ let chaptersObj = {
         img: 'assets/snail.jpg',
         options: [
             {
-                text: "Continuer votre chemin à droite.",
+                text: "Continuer votre chemin à droite",
                 action: "goToChapter('chapitre10')",
                     },
             {   
-                text: "Continuer votre chemin à gauche.",
-                action: "goToChapter('chapitre11')",
+                text: "Continuer votre chemin à gauche",
+                action: "achieveStartKnowledge()",
             }
         ]
     },
@@ -169,11 +181,11 @@ let chaptersObj = {
         img: 'assets/strangers.jpg',
         options: [
             {
-                text: "Partir avec eux.",
+                text: "Continuer avec eux",
                 action: "goToChapter('chapitre12)",
             },
             {   
-                text: "Continuer seul.",
+                text: "Continuer seul",
                 action: "goToChapter('chapitre13')",
             }
         ]
@@ -185,7 +197,7 @@ let chaptersObj = {
         img: 'assets/mountains.jpg',
         options: [
             {
-                text: "Recommencer",
+                text: "Fin",
                 action: "reset()"
             }
         ]
@@ -193,7 +205,7 @@ let chaptersObj = {
 
     chapitre13: {
         subtitle: 'Attaque Bunker de son ami(e).',
-        text:'Par chance le chien à effrayer la grenouille et vous avez pu vous échapper tout lesVous arrivez enfin au bunker de votre ami(e). Par contre, la colonie est attaquer par des pirates qui on enchainer un crabe géant pour le controler.',
+        text:'Par chance le chien à effrayer la grenouille et vous avez pu vous échapper tout les deux. Vous arrivez enfin au bunker de votre ami(e). Par contre, la colonie est attaquer par des pirates qui on enchainer un crabe géant pour le controler.',
         img: 'assets/crabe.jpg',
         options: [
             {
@@ -210,7 +222,7 @@ let chaptersObj = {
         img: 'assets/ending.jpg',
         options: [
         {
-            text: "Recommencer",
+            text: "Fin",
             action: "reset()"
         }
         ]
@@ -223,7 +235,7 @@ let chaptersObj = {
         options: [
             {
                 text: "Recommencer",
-                action: "reset()"
+                action: "goToChapter('chapitre9')"
             }
            
         ]
@@ -236,7 +248,7 @@ let chaptersObj = {
         options: [
             {
                 text: "Recommencer",
-                action: "reset()"
+                action: "goToChapter('chapitre4')"
             }
            
         ]
