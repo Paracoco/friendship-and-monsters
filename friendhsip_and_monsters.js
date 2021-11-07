@@ -1,21 +1,26 @@
 let dogFound = false;
-
 function startDog() {
     if (dogFound == true) {
-        goToChapter("chapitre5");
+        goToChapter("chapitre13");
     } else {
-        goToChapter("");
+        goToChapter("chapitre16");
     }
 };
 
 let knowledge = false;
 function startKnowledge (){
     if (knowledge == true) {
-        goToChapter("chapitre13");
+        goToChapter("chapitre14");
     } else {
-        goToChapter("");
+        goToChapter("chapitre15");
     }
 };
+ 
+function reset(){
+    dogFound = false;
+    knowledge = false;
+    goToChapter("chapitre1")
+}
 
 let chaptersObj = {
     chapitre1: {
@@ -36,19 +41,19 @@ let chaptersObj = {
 
     chapitre2: {
         subtitle: 'Mort par invasion de monstres',
-        text:'.',
+        text:"Des monstres ont réussi à s'infiltrer dans votre bunker et tuer tout le monde.",
         img: 'assets/bunker_monster.jpg',
         options: [
             {
-                text: "Suivant",
-                action: "goToChapter('chapitre1')",
+                text: "Recommencer",
+                action: "reset()"
             }
         ]
     },
 
     chapitre3: {
         subtitle: 'Part en aventure',
-        text: '.',
+        text: 'Vous prenez votre courage et commencez votre séjour en direction du bunker de votre ami.',
         img: 'assets/aventure.jpg',
         options: [
             {
@@ -112,19 +117,19 @@ let chaptersObj = {
         img: 'assets/sand_gobblers.jpg',
         options: [
             {
-                text: "Suivant.",
+                text: "Suivant",
                 action: "goToChapter('chapitre8')",
             }
         ]
     },
 
     chapitre8: {
-        subtitle: 'Mort',
-        text: '.',
+        subtitle: 'Mort nid',
+        text: 'Il y avait aucune possibilité de sortir du nid seul. vous êtes devenu le diner des sand gobblers',
         img: 'assets/mort.jpg',
         options: [
             {
-                text: "Suivant.",
+                text: "Recommencer",
                 action: "goToChapter('chapitre6')",
             }
         ]
@@ -147,18 +152,14 @@ let chaptersObj = {
     },
 
     chapitre10: {
-        subtitle: 'Attaque surprise bonus chien.',
-        text:'En marchant paisiblement vous vous faites soudainement attaquer par surpsise par une énorme grenouille.',
+        subtitle: 'Attaque surprise.',
+        text:'En marchant paisiblement vous vous faites soudainement attaquer par surprise par une énorme grenouille.',
         img: 'assets/frog.jpg',
         options: [
             {
-                text: "Sans chien.",
-                action: "goToChapter('chapitre8')",
+                text: "Suivant",
+                action: "startDog()",
             },
-            {   
-                text: "Avec chien.",
-                action: "goToChapter('chapitre13')",
-            }
         ]
     },
     
@@ -184,29 +185,22 @@ let chaptersObj = {
         img: 'assets/mountains.jpg',
         options: [
             {
-                text: "Sans chien.",
-                action: "goToChapter('chapitre8')",
-            },
-            {   
-                text: "Avec chien.",
-                action: "goToChapter('chapitre13')",
+                text: "Recommencer",
+                action: "reset()"
             }
         ]
     },           
 
     chapitre13: {
         subtitle: 'Attaque Bunker de son ami(e).',
-        text:'Vous arrivez enfin au bunker de votre ami(e). Par contre, la colonie est attaquer par des pirates qui on enchainer un crabe géant pour le controler.',
+        text:'Par chance le chien à effrayer la grenouille et vous avez pu vous échapper tout lesVous arrivez enfin au bunker de votre ami(e). Par contre, la colonie est attaquer par des pirates qui on enchainer un crabe géant pour le controler.',
         img: 'assets/crabe.jpg',
         options: [
             {
-            text: "L'attquer et essayer de le tuer.",
-            action: "goToChapter('chapitre8')",
+            text: "Suivant",
+            action: "startKnowledge()",
             },
-            {   
-                text: "Regarder ses yeux et le libérer.",
-                action: "goToChapter('chapitre14')",
-            }
+           
         ]
     },
 
@@ -214,9 +208,41 @@ let chaptersObj = {
         subtitle: 'Part dans le nord avec son ami(e).',
         text:'Vous et votre ami(e) décider de partir vers le nord ou les monstre y sont moins nombreux.',
         img: 'assets/ending.jpg',
-        options: []
-    }
-}
+        options: [
+        {
+            text: "Recommencer",
+            action: "reset()"
+        }
+        ]
+    },
+
+    chapitre15: {
+        subtitle: 'Mort crabe',
+        text:'Vous avez essayer de tuer le crabe mais sans succès.',
+        img: 'assets/frog.jpg',
+        options: [
+            {
+                text: "Recommencer",
+                action: "reset()"
+            }
+           
+        ]
+    },
+
+    chapitre16: {
+        subtitle: 'Mort grenouille',
+        text:'Vous avez été trop lent pour échapper à la grenouille géante.',
+        img: 'assets/crabe.jpg',
+        options: [
+            {
+                text: "Recommencer",
+                action: "reset()"
+            }
+           
+        ]
+    },
+};
+
 
 function goToChapter(chapterName) {
     let choice = "";
