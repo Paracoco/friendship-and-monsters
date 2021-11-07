@@ -219,7 +219,7 @@ let chaptersObj = {
     chapitre15: {
         subtitle: 'Mort crabe',
         text:'Vous avez essayer de tuer le crabe mais sans succès.',
-        img: 'assets/frog.jpg',
+        img: 'assets/crabe.jpg',
         options: [
             {
                 text: "Recommencer",
