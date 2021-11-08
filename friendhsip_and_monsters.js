@@ -186,7 +186,7 @@ let chaptersObj = {
             },
             {   
                 text: "Continuer seul",
-                action: "goToChapter('chapitre13')",
+                action: "goToChapter('chapitre17')",
             }
         ]
     },
@@ -206,7 +206,7 @@ let chaptersObj = {
     chapitre13: {
         subtitle: 'Attaque Bunker de son ami(e).',
         text:'Par chance le chien à effrayer la grenouille et vous avez pu vous échapper tout les deux. Vous arrivez enfin au bunker de votre ami(e). Par contre, la colonie est attaquer par des pirates qui on enchainer un crabe géant pour le controler.',
-        img: 'assets/crabe.jpg',
+        img: 'assets/dog_frog.jpg',
         options: [
             {
             text: "Suivant",
@@ -244,12 +244,25 @@ let chaptersObj = {
     chapitre16: {
         subtitle: 'Mort grenouille',
         text:'Vous avez été trop lent pour échapper à la grenouille géante.',
-        img: 'assets/crabe.jpg',
+        img: 'assets/frog.jpg',
         options: [
             {
                 text: "Recommencer",
                 action: "goToChapter('chapitre4')"
             }
+           
+        ]
+    },
+
+    chapitre17: {
+        subtitle: 'Attaque Bunker de son ami(e).',
+        text:'Vous arrivez enfin au bunker de votre ami(e). Par contre, la colonie est attaquer par des pirates qui on enchainer un crabe géant pour le controler.',
+        img: 'assets/crabe.jpg',
+        options: [
+            {
+            text: "Suivant",
+            action: "startKnowledge()",
+            },
            
         ]
     },
