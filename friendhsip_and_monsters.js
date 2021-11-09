@@ -32,7 +32,8 @@ function reset(){
     dogFound = false;
     knowledge = false;
     goToChapter("chapitre1")
-}
+};
+
 
 let chaptersObj = {
     chapitre1: {
@@ -167,6 +168,7 @@ let chaptersObj = {
         subtitle: 'Attaque surprise.',
         text:'En marchant paisiblement vous vous faites soudainement attaquer par surprise par une énorme grenouille.',
         img: 'assets/frog.jpg',
+        video: "assets/frog_video.mp4",
         options: [
             {
                 text: "Suivant",
