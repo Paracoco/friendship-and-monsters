@@ -108,6 +108,7 @@ let chaptersObj = {
         subtitle: 'Monstre sur votre chemin',
         text:'En continuant votre chemin, vous rencontrez un monstre sur votre chemin.',
         img: 'assets/fige.jpg',
+        video: "assets/frog_video.mp4",
         options: [
             {
                 text: "Courire vite sans regarder derrière",
