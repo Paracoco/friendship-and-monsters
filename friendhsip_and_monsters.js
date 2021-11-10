@@ -275,11 +275,19 @@ let chaptersObj = {
 function goToChapter(chapterName) {
     let choice = "";
     let chapter = chaptersObj[chapterName];
-
+    let balise ="";
     document.querySelector(".chapitre").innerText= chapter.subtitle;
     document.querySelector(".text").innerText= chapter.text;
-    document.querySelector(".image").innerHTML=`<img src="${chapter.img}"/>`;
-
+    
+    
+    if(chapter.video != undefined){
+        balise =`<video src=${chapter.video} autoplay loop muted </video>`
+       }
+    else{
+        balise=`<img src=${chapter.img}></img>`
+       }
+       
+    document.querySelector(".image").innerHTML=balise;
 
     const optionArr = chapter.options.length;
     for (let index = 0; index < optionArr; index++){
@@ -287,13 +295,7 @@ function goToChapter(chapterName) {
     }
     document.querySelector(".options").innerHTML = choice;
    
-    if(chapter.video = true){
-     `<video> src="${chapter.video} auotplay loop muted"/>`
-    }
-
-    else{
-    `<img src="${chapter.img}"/>`
-    }
+   
 }
 
 goToChapter('chapitre1')
