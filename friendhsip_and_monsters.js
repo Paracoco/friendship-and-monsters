@@ -281,7 +281,7 @@ function goToChapter(chapterName) {
     let btn = document.querySelector(".button");
     btn.addEventListener("click", function(){
         audio.play();
-    })
+    });
 
     document.querySelector(".chapitre").innerText= chapter.subtitle;
     document.querySelector(".text").innerText= chapter.text;
