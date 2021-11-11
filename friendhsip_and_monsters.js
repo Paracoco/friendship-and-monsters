@@ -278,11 +278,12 @@ function goToChapter(chapterName) {
     let balise ="";
     
     const audio = new Audio("assets/audio_chapters.mp3")
-    let btn = document.querySelector(".button");
+    let btn = document.querySelector(".options");
+    let volume = 0.1;
+    audio.volume = volume
     btn.addEventListener('click', function(){
         audio.play();
     });
-    
 
     document.querySelector(".chapitre").innerText= chapter.subtitle;
     document.querySelector(".text").innerText= chapter.text;
