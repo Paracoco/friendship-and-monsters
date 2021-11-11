@@ -276,6 +276,11 @@ function goToChapter(chapterName) {
     let choice = "";
     let chapter = chaptersObj[chapterName];
     let balise ="";
+    const audio = new Audio("audio_chapters.mp3");
+    let btn = document.querySelector(".button");
+    btn.addEventListener("click", function(){
+        audio.play();
+    })
     document.querySelector(".chapitre").innerText= chapter.subtitle;
     document.querySelector(".text").innerText= chapter.text;
     
@@ -293,9 +298,9 @@ function goToChapter(chapterName) {
     for (let index = 0; index < optionArr; index++){
         choice += `<input type="button" class="button" value='${chapter.options[index].text}' onclick="${chapter.options[index].action}"/>`;
     }
+    
     document.querySelector(".options").innerHTML = choice;
-   
-   
+
 }
 
 goToChapter('chapitre1')
