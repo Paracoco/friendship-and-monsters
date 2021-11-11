@@ -283,6 +283,8 @@ function goToChapter(chapterName) {
     audio.volume = volume
     btn.addEventListener('click', function(){
         audio.play();
+        audio.pause();
+        currentTime = 0
     });
 
     document.querySelector(".chapitre").innerText= chapter.subtitle;
