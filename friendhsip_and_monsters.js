@@ -277,7 +277,7 @@ function goToChapter(chapterName) {
     let chapter = chaptersObj[chapterName];
     let balise ="";
     
-    const audio = new Audio("audio_chapters.mp3");
+    const audio = new Audio('audio_chapters.mp3');
     let btn = document.querySelector(".button");
     btn.addEventListener("click", function(){
         audio.play();
