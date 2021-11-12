@@ -277,14 +277,12 @@ function goToChapter(chapterName) {
     let chapter = chaptersObj[chapterName];
     let balise ="";
     
-    const audio = new Audio("assets/audio_chapters.mp3")
+    const audio = new Audio("assets/mixkit-guitar-string-tone-2326.mp3")
     let btn = document.querySelector(".options");
-    let volume = 0.1;
+    let volume = 0.5;
     audio.volume = volume
     btn.addEventListener('click', function(){
         audio.play();
-        audio.pause();
-        currentTime = 0
     });
 
     document.querySelector(".chapitre").innerText= chapter.subtitle;
