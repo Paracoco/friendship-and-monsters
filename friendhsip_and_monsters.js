@@ -116,7 +116,7 @@ let chaptersObj = {
             },
             {   
                 text: "Utiliser votre arbalète que vous ignoré les fonctions",
-                action: "goToChapter('chapitre8')",
+                action: "goToChapter('chapitre18')",
             },
             {   
                 text: "Resté figé",
@@ -185,7 +185,7 @@ let chaptersObj = {
         options: [
             {
                 text: "Continuer avec eux",
-                action: "goToChapter('chapitre12)",
+                action: "goToChapter('chapitre12')",
             },
             {   
                 text: "Continuer seul",
@@ -201,7 +201,7 @@ let chaptersObj = {
         options: [
             {
                 text: "Fin",
-                action: "reset()"
+                action: "reset()",
             }
         ]
     },           
@@ -269,17 +269,34 @@ let chaptersObj = {
            
         ]
     },
+
+    chapitre18: {
+        subtitle: 'Monstre part',
+        text:'Vous manquer votre cible, mais le monstre le continue sa route désinterressé par vous.',
+        img: 'assets/snail.jpg',
+        options: [
+            {
+                text: "Continuer votre chemin à droite",
+                action: "goToChapter('chapitre10')",
+                    },
+            {   
+                text: "Continuer votre chemin à gauche",
+                action: "achieveStartKnowledge()",
+            }
+           
+        ]
+    },
 };
 
-
+const audio = new Audio("assets/mixkit-guitar-string-tone-2326.mp3")
 function goToChapter(chapterName) {
     let choice = "";
     let chapter = chaptersObj[chapterName];
     let balise ="";
     
-    const audio = new Audio("assets/mixkit-guitar-string-tone-2326.mp3")
+    
     let btn = document.querySelector(".options");
-    let volume = 0.5;
+    let volume = 0.8;
     audio.volume = volume
     btn.addEventListener('click', function(){
         audio.play();
