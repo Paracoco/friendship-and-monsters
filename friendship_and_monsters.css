@@ -1,7 +1,7 @@
 body {  
     background-color:#f5b642;
     width:auto;
-    height: 100vh;
+    height:100%;
     display:flex;
     align-items:center;
     justify-content: center;
@@ -81,4 +81,3 @@ body {
   color:white;
   margin-top: 30px;
 }
-
