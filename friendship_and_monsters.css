@@ -1,19 +1,18 @@
 body {  
-    background-color:#f5b642;
-    width:auto;
-    height:100%;
-    display:flex;
-    align-items:center;
-    justify-content: center;
+  background-color:#f5b642;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
   }
   
   .box {
-    width: 400px;
+    width: 800px;
     padding: 400px;
     background-color:#000723;
     text-align:center;
     border: 8px solid #fff;
-   
+   height: 100%;
   }
   
   h1 {
@@ -45,10 +44,10 @@ body {
   .text{
     margin-top:40px;
       display:flex;
-      justify-content:flex-start;
+      justify-content:center;
       align-items:flex-end;
       color: white;
-      font-size: x;
+      font-size: 18px;
       
     }
 

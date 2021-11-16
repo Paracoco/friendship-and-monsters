@@ -321,7 +321,21 @@ function goToChapter(chapterName) {
     }
     
     document.querySelector(".options").innerHTML = choice;
+    
+    localStorage.setItem("chapterUser", chapterName);
+    let chapterUser = localStorage.getItem("chapterUser");
+    
+};
 
-}
+document.addEventListener("DOMContentLoaded", function(){
+    console.log(localStorage.getItem("test"))
+   
+    if(localStorage.getItem("chapterUser") != null ){
+goToChapter(`${localStorage.getItem("chapterUser")}`)
+    }
 
-goToChapter('chapitre1')
+    else{
+        goToChapter('chapitre1')
+    }
+});
+
