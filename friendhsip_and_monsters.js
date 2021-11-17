@@ -325,10 +325,10 @@ function goToChapter(chapterName) {
     localStorage.setItem("chapterUser", chapterName);
     let chapterUser = localStorage.getItem("chapterUser");
     
+    
 };
 
 document.addEventListener("DOMContentLoaded", function(){
-    console.log(localStorage.getItem("test"))
    
     if(localStorage.getItem("chapterUser") != null ){
 goToChapter(`${localStorage.getItem("chapterUser")}`)
@@ -337,5 +337,9 @@ goToChapter(`${localStorage.getItem("chapterUser")}`)
     else{
         goToChapter('chapitre1')
     }
+
+   
+
+   
 });
 
