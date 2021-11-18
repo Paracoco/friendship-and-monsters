@@ -3,6 +3,7 @@ let dogFound = false;
 function achieveStartDog() {
     dogFound = true;
     goToChapter("chapitre5")
+    localStorage.setItem("keyDog", dogFound)
 };
 
 function startDog() {
@@ -18,6 +19,7 @@ let knowledge = false;
 function achieveStartKnowledge(){
     knowledge = true;
     goToChapter("chapitre11")
+    localStorage.setItem("keyKnowledge", knowledge)
 };
 
 function startKnowledge (){
@@ -325,21 +327,30 @@ function goToChapter(chapterName) {
     localStorage.setItem("chapterUser", chapterName);
     let chapterUser = localStorage.getItem("chapterUser");
     
-    
+
 };
 
 document.addEventListener("DOMContentLoaded", function(){
    
-    if(localStorage.getItem("chapterUser") != null ){
+    if(localStorage.getItem("chapterUser") != null){
 goToChapter(`${localStorage.getItem("chapterUser")}`)
     }
-
     else{
         goToChapter('chapitre1')
     }
+    
+    if(localStorage.getItem("keyDog") != null){
+        dogFound = true
+    }
+    else{
+        dogFound = false
+    }
 
-   
-
-   
+    if(localStorage.getItem("keyKnowledge") != null){
+        knowledge = true
+    }
+    else{
+        knowledge = false
+    }
 });
 
