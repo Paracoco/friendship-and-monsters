@@ -355,6 +355,5 @@ goToChapter(`${localStorage.getItem("chapterUser")}`)
         knowledge = false
     }
 
-
 });
 
