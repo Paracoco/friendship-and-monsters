@@ -340,14 +340,14 @@ goToChapter(`${localStorage.getItem("chapterUser")}`)
     }
     
     if(localStorage.getItem("keyDog") != null){
-        dogFound = true
+        dogFound = Boolean(localStorage.getItem("keyDog"))
     }
     else{
         dogFound = false
     }
 
     if(localStorage.getItem("keyKnowledge") != null){
-        knowledge = true
+        knowledge = Boolean(localStorage.getItem("keyKnowledge"))
     }
     else{
         knowledge = false
