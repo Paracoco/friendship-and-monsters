@@ -336,10 +336,10 @@ document.addEventListener("DOMContentLoaded", function(){
 goToChapter(`${localStorage.getItem("chapterUser")}`)
     }
     else{
-        reset()
+        goToChapter("chapitre1")
     }
     
-    if(localStorage.getItem("keyDog") != null){
+    if(localStorage.getItem("keyDog") != undefined){
         dogFound = Boolean(localStorage.getItem("keyDog"))
         console.log(dogFound)
     }
@@ -347,7 +347,7 @@ goToChapter(`${localStorage.getItem("chapterUser")}`)
         dogFound = false
     }
 
-    if(localStorage.getItem("keyKnowledge") != null){
+    if(localStorage.getItem("keyKnowledge") != undefined){
         knowledge = Boolean(localStorage.getItem("keyKnowledge"))
         console.log(knowledge)
     }
