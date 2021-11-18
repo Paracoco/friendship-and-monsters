@@ -336,7 +336,7 @@ document.addEventListener("DOMContentLoaded", function(){
 goToChapter(`${localStorage.getItem("chapterUser")}`)
     }
     else{
-        goToChapter('chapitre1')
+        reset()
     }
     
     if(localStorage.getItem("keyDog") != null){
