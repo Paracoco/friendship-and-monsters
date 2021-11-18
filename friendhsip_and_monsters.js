@@ -341,16 +341,20 @@ goToChapter(`${localStorage.getItem("chapterUser")}`)
     
     if(localStorage.getItem("keyDog") != null){
         dogFound = Boolean(localStorage.getItem("keyDog"))
+        console.log(dogFound)
     }
     else{
         dogFound = false
     }
 
-    if(localStorage.getItem("keyKnowledge") != null){
+    if(localStorage.getItem("keyKnowledge") != undefined){
         knowledge = Boolean(localStorage.getItem("keyKnowledge"))
+        console.log(knowledge)
     }
     else{
         knowledge = false
     }
+
+
 });
 
