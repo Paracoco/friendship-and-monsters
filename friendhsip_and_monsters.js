@@ -347,7 +347,7 @@ goToChapter(`${localStorage.getItem("chapterUser")}`)
         dogFound = false
     }
 
-    if(localStorage.getItem("keyKnowledge") != undefined){
+    if(localStorage.getItem("keyKnowledge") != null){
         knowledge = Boolean(localStorage.getItem("keyKnowledge"))
         console.log(knowledge)
     }
