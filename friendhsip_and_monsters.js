@@ -296,26 +296,20 @@ function goToChapter(chapterName) {
     let chapter = chaptersObj[chapterName];
     let balise ="";
     
-    
-    let btn = document.querySelector(".options");
     let volume = 0.8;
     audio.volume = volume
-    btn.addEventListener('click', function(){
-        audio.play();
-    });
+    audio.play();
 
     document.querySelector(".chapitre").innerText= chapter.subtitle;
     document.querySelector(".text").innerText= chapter.text;
     
-    
     if(chapter.video != undefined){
-        balise =`<video src=${chapter.video} autoplay loop muted </video>`
-       }
-    else{
-        balise=`<img src=${chapter.img}></img>`
-       }
+        balise =`<video src="${chapter.video}" autoplay loop muted>`
+    } else {
+        balise=`<img src="${chapter.img}">`
+    }
        
-    document.querySelector(".image").innerHTML=balise;
+    document.querySelector(".image").innerHTML = balise;
 
     const optionArr = chapter.options.length;
     for (let index = 0; index < optionArr; index++){
@@ -325,35 +319,24 @@ function goToChapter(chapterName) {
     document.querySelector(".options").innerHTML = choice;
     
     localStorage.setItem("chapterUser", chapterName);
-    let chapterUser = localStorage.getItem("chapterUser");
-    
-
 };
-
-document.addEventListener("DOMContentLoaded", function(){
    
-    if(localStorage.getItem("chapterUser") != null){
-goToChapter(`${localStorage.getItem("chapterUser")}`)
-    }
-    else{
-        goToChapter("chapitre1")
-    }
-    
-    if(localStorage.getItem("keyDog") != undefined){
-        dogFound = Boolean(localStorage.getItem("keyDog"))
-        console.log(dogFound)
-    }
-    else{
-        dogFound = false
-    }
+if(localStorage.getItem("chapterUser") != null){
+    goToChapter(`${localStorage.getItem("chapterUser")}`)
+} else {
+    goToChapter("chapitre1")
+}
 
-    if(localStorage.getItem("keyKnowledge") != undefined){
-        knowledge = Boolean(localStorage.getItem("keyKnowledge"))
-        console.log(knowledge)
-    }
-    else{
-        knowledge = false
-    }
+if(localStorage.getItem("keyDog") != undefined){
+    dogFound = Boolean(localStorage.getItem("keyDog"))
+    console.log(dogFound)
+} else {
+    dogFound = false
+}
 
-});
-
+if(localStorage.getItem("keyKnowledge") != undefined){
+    knowledge = Boolean(localStorage.getItem("keyKnowledge"))
+    console.log(knowledge)
+} else {
+    knowledge = false
+}
