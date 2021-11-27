@@ -30,7 +30,7 @@ function startKnowledge (){
     }
 };
  
-function reset(){
+function restart(){
     dogFound = false;
     knowledge = false;
     goToChapter("chapitre1")
@@ -339,4 +339,9 @@ if(localStorage.getItem("keyKnowledge") != undefined){
     console.log(knowledge)
 } else {
     knowledge = false
+}
+
+function reset(){
+    localStorage.clear()
+    goToChapter('chapitre1')
 }
