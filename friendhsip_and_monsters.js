@@ -341,6 +341,18 @@ if(localStorage.getItem("keyKnowledge") != undefined){
     knowledge = false
 }
 
+let input = document.querySelector(".input");
+let son = true;
+input.addEventListener("change", function(){
+    if (son == true){
+        audio.play()
+    }
+    else{
+        audio.pause()
+    }
+});
+
+
 function reset(){
     localStorage.clear()
     goToChapter('chapitre1')
