@@ -289,16 +289,24 @@ let chaptersObj = {
         ]
     },
 };
-
+let checkbox = document.querySelector(".input");
 const audio = new Audio("assets/mixkit-guitar-string-tone-2326.mp3")
 function goToChapter(chapterName) {
     let choice = "";
     let chapter = chaptersObj[chapterName];
     let balise ="";
     
+
     let volume = 0.8;
     audio.volume = volume
-    audio.play();
+    
+   if (checkbox.checked){
+       audio.play()
+   }
+   else{
+       audio.pause()
+   }
+
 
     document.querySelector(".chapitre").innerText= chapter.subtitle;
     document.querySelector(".text").innerText= chapter.text;
@@ -319,7 +327,12 @@ function goToChapter(chapterName) {
     document.querySelector(".options").innerHTML = choice;
     
     localStorage.setItem("chapterUser", chapterName);
+
+
+    
 };
+
+
    
 if(localStorage.getItem("chapterUser") != null){
     goToChapter(`${localStorage.getItem("chapterUser")}`)
@@ -341,19 +354,15 @@ if(localStorage.getItem("keyKnowledge") != undefined){
     knowledge = false
 }
 
-let input = document.querySelector(".input");
-let son = true;
-input.addEventListener("change", function(){
-    if (son == true){
-        audio.play()
-    }
-    else{
-        audio.pause()
-    }
-});
 
 
+let erase = document.querySelector(".reset")
 function reset(){
     localStorage.clear()
     goToChapter('chapitre1')
 }
+
+erase.addEventListener("click", function(){
+    reset();
+})
+
