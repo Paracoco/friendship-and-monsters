@@ -61,7 +61,7 @@ let chaptersObj = {
         options: [
             {
                 text: "Recommencer",
-                action: "reset()"
+                action: "restart()"
             }
         ]
     },
@@ -203,7 +203,7 @@ let chaptersObj = {
         options: [
             {
                 text: "Fin",
-                action: "reset()",
+                action: "restart()",
             }
         ]
     },           
@@ -228,7 +228,7 @@ let chaptersObj = {
         options: [
         {
             text: "Fin",
-            action: "reset()"
+            action: "restart()"
         }
         ]
     },
