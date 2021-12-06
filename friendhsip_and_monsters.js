@@ -290,12 +290,17 @@ let chaptersObj = {
     },
 };
 let checkbox = document.querySelector(".input");
+let body = document.querySelector("body");
+
 const audio = new Audio("assets/mixkit-guitar-string-tone-2326.mp3")
+
 function goToChapter(chapterName) {
     let choice = "";
     let chapter = chaptersObj[chapterName];
     let balise ="";
     
+   body.className = chapterName
+
 
     let volume = 0.8;
     audio.volume = volume
@@ -306,6 +311,7 @@ function goToChapter(chapterName) {
    else{
        audio.pause()
    }
+
 
 
     document.querySelector(".chapitre").innerText= chapter.subtitle;
@@ -323,9 +329,9 @@ function goToChapter(chapterName) {
     for (let index = 0; index < optionArr; index++){
         choice += `<input type="button" class="button" value='${chapter.options[index].text}' onclick="${chapter.options[index].action}"/>`;
     }
-    
+ 
     document.querySelector(".options").innerHTML = choice;
-    
+ 
     localStorage.setItem("chapterUser", chapterName);
 
 
@@ -366,3 +372,5 @@ erase.addEventListener("click", function(){
     reset();
 })
 
+
+  
