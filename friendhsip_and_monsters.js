@@ -371,6 +371,3 @@ function reset(){
 erase.addEventListener("click", function(){
     reset();
 })
-
-
-  

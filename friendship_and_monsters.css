@@ -254,3 +254,39 @@ body {
   animation-duration: 2.25s;
 }
 
+.chapitre2 > .box{
+  background-image: url("./assets/blood.jpg");
+  background-size: cover;
+  
+}
+
+.chapitre8 > .box{
+  background-image: url("./assets/blood.jpg");
+  background-size: cover;
+  
+}
+
+.chapitre15 > .box{
+  background-image: url("./assets/blood.jpg");
+  background-size: cover;
+  
+}
+
+.chapitre16 > .box{
+  background-image: url("./assets/blood.jpg");
+  background-size: cover;
+  
+}
+
+.chapitre14 > .box{
+  background-image: url("./assets/sunset.jpg");
+  background-size: cover;
+  
+  
+}
+
+.chapitre12 > .box{
+  background-image: url("./assets/sunset.jpg");
+  background-size: cover;
+  
+}
