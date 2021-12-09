@@ -40,7 +40,7 @@ function restart(){
 let chaptersObj = {
     chapitre1: {
         subtitle: 'Réveil',
-        text:'Vous vous réveillez dans votre bunker et penser à votre meilleur(e) ami(e) qui est loin dans un bunker différent.',
+        text:'Vous vous réveillez dans votre bunker et pensé à votre meilleur(e) ami(e) qui est loin dans un bunker différent.',
         img: 'assets/reveil.jpg',
         options: [
             {
@@ -80,7 +80,7 @@ let chaptersObj = {
 
     chapitre4: {
         subtitle: 'Trouve une van',
-        text:'En se promenant, vous trouvez une van abandoné parmis des maisons en ruines.',
+        text:'En se promenant, vous trouvez une van abandonée parmis des maisons en ruines.',
         img: 'assets/van.jpg',
         options: [
             {
@@ -108,7 +108,7 @@ let chaptersObj = {
 
     chapitre6: {
         subtitle: 'Monstre sur votre chemin',
-        text:'En continuant votre chemin, vous rencontrez un monstre sur votre chemin.',
+        text:'En continuant votre chemin, vous rencontrez un monstre qui bloque la route.',
         img: 'assets/fige.jpg',
         video: "assets/bunker_video.mp4",
         options: [
@@ -121,7 +121,7 @@ let chaptersObj = {
                 action: "goToChapter('chapitre18')",
             },
             {   
-                text: "Resté figé",
+                text: "Rester figé",
                 action: "goToChapter('chapitre9')",
             }
         ]
@@ -129,7 +129,7 @@ let chaptersObj = {
 
     chapitre7: {
         subtitle: 'Tombe dans un nid',
-        text:'Vous courrez sans regarder ou vous allez et tomber dans un nid de sand gobblers.',
+        text:'Vous courez sans regarder où vous allez et tomber dans un nid de sand gobblers.',
         img: 'assets/sand_gobblers.jpg',
         options: [
             {
@@ -210,7 +210,7 @@ let chaptersObj = {
 
     chapitre13: {
         subtitle: 'Attaque Bunker de son ami(e).',
-        text:'Par chance le chien à effrayer la grenouille et vous avez pu vous échapper tout les deux. Vous arrivez enfin au bunker de votre ami(e). Par contre, la colonie est attaquer par des pirates qui on enchainer un crabe géant pour le controler.',
+        text:'Par chance le chien à effrayé la grenouille et vous avez pu vous échapper tout les deux. Vous arrivez enfin au bunker de votre ami(e). Par contre, la colonie est attaquée par des pirates qui ont enchainé un crabe géant pour le controler.',
         img: 'assets/dog_frog.jpg',
         options: [
             {
@@ -223,7 +223,7 @@ let chaptersObj = {
 
     chapitre14: {
         subtitle: 'Part dans le nord avec son ami(e).',
-        text:'Vous et votre ami(e) décider de partir vers le nord ou les monstre y sont moins nombreux.',
+        text:'Vous et votre ami(e) décidez de partir vers le nord o les monstre y sont moins nombreux.',
         img: 'assets/ending.jpg',
         options: [
         {
@@ -235,7 +235,7 @@ let chaptersObj = {
 
     chapitre15: {
         subtitle: 'Mort crabe',
-        text:'Vous avez essayer de tuer le crabe mais sans succès.',
+        text:'Vous avez essayé de tuer le crabe mais sans succès.',
         img: 'assets/crabe.jpg',
         options: [
             {
@@ -261,7 +261,7 @@ let chaptersObj = {
 
     chapitre17: {
         subtitle: 'Attaque Bunker de son ami(e).',
-        text:'Vous arrivez enfin au bunker de votre ami(e). Par contre, la colonie est attaquer par des pirates qui on enchainer un crabe géant pour le controler.',
+        text:'Vous arrivez enfin au bunker de votre ami(e). Par contre, la colonie est attaquer par des pirates qui ont enchainé un crabe géant pour le controler.',
         img: 'assets/crabe.jpg',
         options: [
             {
@@ -274,7 +274,7 @@ let chaptersObj = {
 
     chapitre18: {
         subtitle: 'Monstre part',
-        text:'Vous manquer votre cible, mais le monstre le continue sa route désinterressé par vous.',
+        text:'Vous manquez votre cible, mais le monstre le continue sa route désinterressé par vous.',
         img: 'assets/snail.jpg',
         options: [
             {
