@@ -134,25 +134,25 @@ body {
 
 
 .chapitre2 > .box{
-  background-image: url("./assets/blood.jpg");
+  background: url("https://media.giphy.com/media/f4IjBQupqojhqQzKk2/giphy.gif");
   background-size: cover;
   
 }
 
 .chapitre8 > .box{
-  background-image: url("./assets/blood.jpg");
+  background: url("https://media.giphy.com/media/f4IjBQupqojhqQzKk2/giphy.gif");
   background-size: cover;
   
 }
 
 .chapitre15 > .box{
-  background-image: url("./assets/blood.jpg");
+  background: url("https://media.giphy.com/media/f4IjBQupqojhqQzKk2/giphy.gif");
   background-size: cover;
   
 }
 
 .chapitre16 > .box{
-  background-image: url("./assets/blood.jpg");
+  background: url("https://media.giphy.com/media/f4IjBQupqojhqQzKk2/giphy.gif");
   background-size: cover;
   
 }
